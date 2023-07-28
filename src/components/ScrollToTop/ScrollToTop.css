@@ -1,0 +1,23 @@
+.scroll-to-top-button {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    display: none;
+    background-color: white; /* Fundo branco */
+    color: #017AFF; /* Cor azul para a seta */
+    font-size: 24px;
+    width: 40px; /* Definir uma largura igual à altura para tornar o botão redondo */
+    height: 40px; /* Tornar o botão redondo */
+    line-height: 40px; /* Centralizar verticalmente a seta dentro do botão */
+    display: flex; /* Usar flexbox para centralizar verticalmente */
+    align-items: center; /* Centralizar verticalmente */
+    justify-content: center; /* Centralizar horizontalmente */
+    border-radius: 50%; /* Torna o botão redondo */
+    cursor: pointer;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20vw;
+  }
+  
+  .scroll-to-top-button .arrow-up {
+    display: block;
+  }

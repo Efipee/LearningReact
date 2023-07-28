@@ -1,0 +1,20 @@
+/* GamesGrid.css */
+#games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 1em;
+    padding: 1em;
+    margin-bottom: 5rem; /* adiciona espaço na parte inferior igual à altura da navbar */
+    margin-top: 3rem; /* adiciona espaço na parte superior igual à altura da navbar */
+}
+
+.game {
+    border: 1px solid #ccc;
+    padding: 1em;
+    text-align: center;
+}
+
+.game img {
+    max-width: 100%;
+    border-radius: 10px;
+}

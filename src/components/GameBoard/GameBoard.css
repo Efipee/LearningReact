@@ -1,0 +1,58 @@
+:root {
+  --cell-size: calc(100px + 2vmin);
+  --cell-margin: calc(0.6vh + 1vmin);
+  --img-max-size: calc(500px + 2vmin);
+}
+
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cell {
+  flex: 0 0 auto;
+  margin: var(--cell-margin);
+  min-width: var(--cell-size);
+  min-height: var(--cell-size);
+  aspect-ratio: 1 / 1;
+  position: relative;
+}
+
+.cell img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  max-width: var(--img-max-size);
+  max-height: var(--cell-size);
+}
+
+.generateOpportunityButton {
+  margin-top: 10px;
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  margin-bottom: 2vh;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+
+@media (max-width: 900px) {
+  :root {
+    --cell-size: calc(50px + 2vmin);
+    --cell-margin: calc(2px + 1vmin);
+    --img-max-size: calc(50px + 2vmin);
+  }
+}
+
+@media (max-width: 600px) {
+  :root {
+    --cell-size: calc(30px + 2vmin);
+    --cell-margin: 1px;
+    --img-max-size: calc(44px + 2vmin);
+  }
+}
