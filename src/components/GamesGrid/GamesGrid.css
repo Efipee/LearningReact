@@ -1,20 +1,79 @@
 /* GamesGrid.css */
 #games-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-template-columns: 1fr;
     gap: 1em;
     padding: 1em;
-    margin-bottom: 5rem; /* adiciona espaço na parte inferior igual à altura da navbar */
-    margin-top: 3rem; /* adiciona espaço na parte superior igual à altura da navbar */
+    margin-bottom: 5rem;
+    margin-top: 3rem;
+}
+
+.games-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Definindo três colunas */
+    gap: 0em;
+}
+
+.header {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.icon-container {
+    width: 30px; /* Ajuste conforme necessário */
+    height: 30px; /* Ajuste conforme necessário */
+    background-color: #fa0505;
+    border-radius: 5px; /* Borda arredondada */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px; /* Espaçamento entre o ícone e o texto */
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
 }
 
 .game {
-    border: 1px solid #ccc;
+    transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Transição mais suave */
+    border: 1px solid #121315;
     padding: 1em;
     text-align: center;
 }
 
+.game img:hover {
+    transform: scale(1.05); /* Aumentar o tamanho em 10% */
+}
+
 .game img {
-    max-width: 100%;
-    border-radius: 10px;
+    width: 200px;
+    height: 100px;
+    border-radius: 5px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.games-title {
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .games-container {
+        grid-template-columns: repeat(2, 1fr); /* Definindo duas colunas em tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .games-container {
+        grid-template-columns: repeat(2, 1fr); /* Definindo duas colunas em dispositivos móveis */
+    }
+
+    .game img {
+        width: 21vh; /* Reduzindo o tamanho da imagem */
+        height: 15vh;
+    }
 }

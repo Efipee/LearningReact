@@ -44,7 +44,7 @@
   .mobile-footer a {
     position: relative;
     margin: 0;
-    width: 33%;
+    width: 50%;
     bottom: 0;
     height: 100%;
     display: inline-block;
@@ -90,7 +90,7 @@
     pointer-events: none;
   }
   .mobile-footer a.active {
-    background-color: rgba(128, 128, 128, 0.15);
+    background-color: rgba(161, 161, 161, 0.15);
     text-indent: 0;
     line-height: 10;
   }

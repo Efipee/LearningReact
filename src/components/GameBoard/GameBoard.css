@@ -4,19 +4,25 @@
   --img-max-size: calc(500px + 2vmin);
 }
 
+body {
+ height: 220vh;
+}
 
 .row {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .cell {
-  flex: 0 0 auto;
+  box-sizing: border-box;
+  flex: 0 0 calc(20% - 2*var(--cell-margin)); /* desconta o valor da margem do tamanho da célula */
   margin: var(--cell-margin);
-  min-width: var(--cell-size);
-  min-height: var(--cell-size);
-  aspect-ratio: 1 / 1;
   position: relative;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 .cell img {
@@ -26,6 +32,8 @@
   max-width: var(--img-max-size);
   max-height: var(--cell-size);
 }
+
+
 
 .generateOpportunityButton {
   margin-top: 10px;
@@ -38,6 +46,10 @@
   margin-bottom: 2vh;
   border-radius: 8px;
   cursor: pointer;
+}
+
+iframe {
+  height: 50vw;
 }
 
 
@@ -54,5 +66,14 @@
     --cell-size: calc(30px + 2vmin);
     --cell-margin: 1px;
     --img-max-size: calc(44px + 2vmin);
+    --cell-height: 220vh;
+  }
+}
+
+@media (min-width: 1200px) {
+  :root {
+    --cell-size: calc(120px + 2vmin);
+    --cell-margin: calc(1vh + 1vmin);
+    --img-max-size: calc(600px + 2vmin);
   }
 }

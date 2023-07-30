@@ -22,9 +22,6 @@ function GameBoard() {
   }, []);
 
 
-
-
-
   const loadGame = async (token) => {
     console.log(token);
     try {
@@ -128,45 +125,48 @@ function GameBoard() {
   const buttonDisabled = isAnimating;
 
   return (
-    <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', marginTop: '3vw'}}>
-      {rows.length > 0 ? (
-        rows.map((row, rowIndex) => (
-          <div key={rowIndex} className="row">
-            {row.map((cell, cellIndex) => (
-              <div key={cellIndex} className="cell">
-                <img src={imageMap[cell]} alt="cell" />
-              </div>
-            ))}
-          </div>
-        ))
-      ) : (
-        Array.from({ length: 5 }, (_, rowIndex) => (
-          <div key={rowIndex} className="row">
-            {Array.from({ length: 5 }, (_, cellIndex) => (
-              <div key={cellIndex} className="cell">
-                <img src={imageMap["LugarOculto"]} alt="cell" />
-              </div>
-            ))}
-          </div>
-        ))
-      )}
-
-      <button
-        className="generateOpportunityButton" // Step 1: Add the className to the "New Game" button
-        onClick={handleNewGameClick}
-        disabled={buttonDisabled}
-      >
-        {buttonText}
-      </button>
-
-      <iframe 
-        src="https://go.aff.7k-partners.com/b886nc8k" 
-        style={{width: '100vw', height: '210vw'}} 
-        allow="autoplay"
-        scrolling="yes"
-        frameBorder="0"
-        title="myFrame"
-      />
+    <div style={{ overflowY: 'scroll', height: '100vh' }}>
+      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', marginTop: '3vw', overflow: 'auto' }}>
+        {rows.length > 0 ? (
+          rows.map((row, rowIndex) => (
+            <div key={rowIndex} className="row">
+              {row.map((cell, cellIndex) => (
+                <div key={cellIndex} className="cell">
+                  <img src={imageMap[cell]} alt="cell" />
+                </div>
+              ))}
+            </div>
+          ))
+        ) : (
+          Array.from({ length: 5 }, (_, rowIndex) => (
+            <div key={rowIndex} className="row">
+              {Array.from({ length: 5 }, (_, cellIndex) => (
+                <div key={cellIndex} className="cell">
+                  <img src={imageMap["LugarOculto"]} alt="cell" />
+                </div>
+              ))}
+            </div>
+          ))
+        )}
+    
+        <button
+          className="generateOpportunityButton"
+          onClick={handleNewGameClick}
+          disabled={buttonDisabled}
+        >
+          {buttonText}
+        </button>
+    
+        <div style={{ overflow: 'hidden', '-webkit-overflow-scrolling': 'touch' }}>
+          <iframe
+            src="https://sshortly1.com/t6Ujfu"
+            style={{ width: '100vw', height: '150vw', marginTop: '50px' }}
+            allow="autoplay"
+            seamless="seamless"
+            title="myFrame"
+          />
+        </div>
+      </div>
     </div>
   );
 }

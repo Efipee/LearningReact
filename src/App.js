@@ -10,10 +10,11 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Navbar />
         <Route path="/" exact component={GamesGrid} />
         <Route path="/miner" component={GameBoard} />
+        <Route path="/.." component={GamesGrid} />
         <ScrollToTop />
+        <Navbar />
       </div>
     </Router>
   );

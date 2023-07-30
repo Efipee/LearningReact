@@ -1,0 +1,11 @@
+.banner {
+    background-color: #f96c08; /* Cor vermelha */
+    height: 30vh; /* Altura do retângulo */
+    width: 50vh; /* Largura total da página */
+    border-radius: 1.5vh; /* Borda arredondada */
+    margin-top: 10vh;
+    justify-content: center;
+    align-items: center;
+    margin: 10vh auto;
+  }
+  
